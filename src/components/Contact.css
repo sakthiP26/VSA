@@ -1,0 +1,123 @@
+
+.contact-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #ed1da5, #036a7c); 
+    overflow: hidden;
+    color: white;
+    text-align: center;
+  }
+  
+  
+  .contact-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    animation: bubble 8s infinite;
+    pointer-events: none;
+  }
+  
+
+  @keyframes bubble {
+    0% {
+      transform: translate(0, 0) scale(0.5);
+      opacity: 0.3;
+    }
+    25% {
+      transform: translate(150px, 100px) scale(1.5);
+      opacity: 0.5;
+    }
+    50% {
+      transform: translate(-100px, 200px) scale(1);
+      opacity: 0.6;
+    }
+    75% {
+      transform: translate(200px, -150px) scale(1.2);
+      opacity: 0.4;
+    }
+    100% {
+      transform: translate(-150px, -100px) scale(0.5);
+      opacity: 0.3;
+    }
+  }
+  
+  
+  form {
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .error {
+    color: #ff6b6b;
+    font-size: 14px;
+  }
+  
+  
+  .btn {
+    background: linear-gradient(45deg, #ff6b6b, #f39c12, #8e44ad, #1abc9c, #3498db);
+    background-size: 400% 400%;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    animation: gradientAnimation 3s linear infinite;
+  }
+  
+  
+  .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
